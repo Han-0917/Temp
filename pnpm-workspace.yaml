@@ -1,6 +1,8 @@
-enableGlobalVirtualStore: true
+virtualStoreType: global
 
 minimumReleaseAgeExclude:
+  - "@mdit/*"
+  - "@mr-hope/*"
   - "@oxfmt/*"
   - "@oxlint/*"
   - "@vitest/*"
@@ -8,13 +10,7 @@ minimumReleaseAgeExclude:
   - oxc-config-hope
   - oxfmt
   - oxlint
-  - vitest
-  - vue
-
+minimumReleaseAgeExcludePrune: true
 trustPolicy: no-downgrade
-
-trustPolicyExclude:
-  # babel
-  - semver@6.3.1
-  # node types
-  - undici-types@6.21.0
+trustPolicyExcludePrune: true
+trustPolicyIgnoreAfter: 720
